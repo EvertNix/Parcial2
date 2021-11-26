@@ -1,0 +1,27 @@
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="title">
+      <h2>Videojuegos24</h2>
+    </a>
+    <% if (user) { %>
+    <ul class="ul">
+      <li class="li"><a href="/">Inicio</a></li>
+      <li class="li"><a href="/profile#videogames">Videojuegos</a></li>
+      <li class="li"><a href="/profile#about">Sobre nosotros</a></li>
+      <li class="li"><a href="/profile#contact">Contactanos</a></li>
+    </ul>
+    <div class="users">
+      <button class="btn_users" id="toggle"><%= user.username %></button>
+      <ul class="select" id="select">
+        <li class="option"><a href="/profile"> Mi perfil </a></li>
+        <li class="option"><a href="/logout"> Cerrar sesión </a></li>
+      </ul>
+    </div>
+    <% } else { %>
+    <ul class="ul">
+      <li class="li"><a href="/register">Registrate</a></li>
+      <li class="li"><a href="/login">Inicia sesión</a></li>
+    </ul>
+    <% } %>
+  </div>
+</nav>

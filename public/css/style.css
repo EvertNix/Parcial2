@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Oswald:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 16px;
+  background: rgb(248, 249, 249);
+  color: rgb(33, 33, 33);
+}
+/*---- container ----*/
+.container {
+  width: 96%;
+  margin: auto;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 82%;
+  }
+}
+/*---- alerts ----*/
+.alert {
+  position: fixed;
+  top: 128px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  z-index: 4;
+}
+.success {
+  transform: translateY(-50%);
+  color: green;
+}
+.error {
+  color: red;
+}
+/*---- nav ----*/
+.nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(253, 254, 254);
+  z-index: 2;
+}
+.nav .container {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav .title h2 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 28px;
+  color: rgb(21, 101, 192);
+}
+.nav .ul {
+  display: flex;
+  gap: 32px;
+}
+.nav .ul .li {
+  list-style: none;
+}
+.nav .ul .li a {
+  color: rgb(33, 33, 33);
+}
+.nav .users {
+  position: relative;
+}
+.users .btn_users {
+  font-size: 16px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.users .select {
+  position: absolute;
+  top: 32px;
+  right: 0;
+  background: rgb(253, 254, 254);
+  border: 1px solid rgb(208, 211, 212);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease;
+}
+.select.active {
+  opacity: 1;
+  visibility: visible;
+}
+.select .option {
+  list-style: none;
+}
+.option a {
+  display: block;
+  width: 240px;
+  padding: 16px 0;
+  text-align: center;
+  color: rgb(33, 33, 33);
+  transition: all 0.4s ease;
+}
+.option a:hover {
+  background: rgba(208, 211, 212, 0.4);
+}
+/*---- header ----*/
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header .container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -2;
+}
+.header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -4;
+}
+.header .p {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+  color: rgb(208, 211, 212);
+}
+.header .p h4 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 48px;
+}
+.header .p p {
+  font-size: 24px;
+}
+.header .p .btn {
+  display: block;
+  margin: auto;
+  padding: 16px 32px;
+  background: rgb(21, 101, 192);
+  color: rgb(253, 254, 254);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+/*---- footer ----*/
+.footer {
+  background: rgb(33, 33, 33);
+}
+.footer .container {
+  height: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer p {
+  color: rgb(253, 254, 254);
+}
+/*---- auth ----*/
+.form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../img/form.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+form {
+  width: 480px;
+  background: rgb(253, 254, 254);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+form .header {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(248, 249, 249);
+  border-bottom: 1px solid rgb(208, 211, 212);
+}
+form .header h2 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 28px;
+  text-align: center;
+}
+form .form_body {
+  padding: 32px;
+}
+.form_body .input {
+  position: relative;
+  margin-bottom: 32px;
+}
+.input input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  background: none;
+  border: 1px solid rgb(208, 211, 212);
+  outline: none;
+  transition: border 0.4s ease;
+}
+.input label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  background: rgb(253, 254, 254);
+  transition: 0.2s ease;
+}
+.input input:focus {
+  border-color: rgb(21, 101, 192);
+}
+.input input:focus ~ label,
+.input input:valid ~ label {
+  top: 0;
+}
+form .btn {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 16px 0;
+  font-size: 16px;
+  color: rgb(253, 254, 254);
+  background: rgb(21, 101, 192);
+  border: none;
+  cursor: pointer;
+}
+form p {
+  display: block;
+  margin-bottom: 16px;
+  text-align: center;
+}
+form p a {
+  color: rgb(21, 101, 192);
+}
+/*---- profile ----*/
+/*---- h4 ----*/
+.h4 {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.h4 h4 {
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 24px;
+}
+/*---- ----*/
+/*---- section videogames ----*/
+.videogames .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+.section .game {
+  position: relative;
+  width: 280px;
+  border: 1px solid rgb(208, 211, 212);
+  transition: all 0.4s ease;
+}
+.game .img {
+  width: 100%;
+  height: 320px;
+  padding: 16px;
+}
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.game .title_game {
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgb(208, 211, 212);
+}
+.title_game p {
+  color: rgb(33, 33, 33);
+}
+.game:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+/*---- section about ----*/
+.about {
+  background: rgb(208, 211, 212);
+}
+.about .container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  align-items: center;
+  gap: 32px;
+}
+.about img {
+  width: 100%;
+  height: 100%;
+}
+.about .p a {
+  color: rgb(21, 101, 192);
+}
+/*---- section contact ----*/
+.contact {
+  background: linear-gradient(to right, #222, #fff);
+}
+.contact .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input textarea {
+  width: 100%;
+  height: 128px;
+  padding: 16px;
+  resize: none;
+  font-size: 16px;
+  background: none;
+  border: 1px solid rgb(208, 211, 212);
+  outline: none;
+}
+.input textarea:focus {
+  border-color: rgb(21, 101, 192);
+}
+.input textarea:focus ~ label,
+.input textarea:valid ~ label {
+  top: 0;
+  transform: translateY(-50%);
+}
+.input:nth-child(5) label {
+  top: 16px;
+  transform: none;
+  transition: all 0.2s ease;
+}

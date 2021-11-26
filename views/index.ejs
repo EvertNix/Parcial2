@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+    <!-- nav -->
+    <%- include('./partials/nav') %>
+    <main>
+      <!-- header -->
+      <header class="header">
+        <img src="./img/header.jpg" alt="Videojuegos" />
+        <div class="container">
+          <div class="p">
+            <% if (user) { %>
+            <h4>Bienvenido a <%= title %> <%= user.username%></h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              quis eaque dolore sequi nobis earum qui!
+            </p>
+            <a href="/profile" class="btn"> Visita tu perfil </a>
+            <% } else { %>
+            <h4>Bienvenido a nuestro sitio web</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              quis eaque dolore sequi nobis earum qui!
+            </p>
+            <a href="/login" class="btn"> Entra ahora mismo! </a>
+            <% } %>
+          </div>
+        </div>
+      </header>
+    </main>
+    <%- include('./partials/footer') %> <%- include('./partials/script') %>
+  </body>
+</html>

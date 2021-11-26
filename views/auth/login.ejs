@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%- title %></title>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <!-- alerts -->
+    <% if (success || error) { %> <%- include('../partials/alerts') %> <% } %>
+    <!-- form -->
+    <div class="form">
+      <form action="/login" method="post">
+        <header class="header">
+          <h2>Inicia sesión en videojuegos24</h2>
+        </header>
+        <div class="form_body">
+          <div class="input">
+            <input type="text" name="username" required />
+            <label>Nombre de usuario</label>
+          </div>
+          <div class="input">
+            <input type="password" name="password" required />
+            <label>Contraseña</label>
+          </div>
+          <button type="submit" class="btn">Inicia sesión</button>
+        </div>
+        <p>¿Aún no tienes cuenta? <a href="/register">Registrate ahora!</a></p>
+        <p><a href="/"> Cancelar </a></p>
+      </form>
+    </div>
+    <%- include('../partials/script') %>
+  </body>
+</html>

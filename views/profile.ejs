@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('./partials/head') %>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!-- alerts -->
+    <% if (success || error) { %> <%- include('./partials/alerts') %> <% } %>
+    <!-- nav -->
+    <%- include('./partials/nav') %>
+    <main>
+      <section class="section videogames" id="videogames">
+        <div class="h4">
+          <h4>Nuestra selección de juegos para tí</h4>
+        </div>
+        <div class="container">
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/cod.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>Call Of Dutty</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/ac.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>Assassin creed</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/dbx.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>Dragonball Xenoverse</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/fifa.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>FIFA</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/gow.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>God of War</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/gtasanandreas.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>GTA San Andreas</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/gtav.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>GTA V</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/halo.jpeg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>Halo</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/mk.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>Mortal Kombat</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/rdr.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>Read Dead Redemption</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/re.jpg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>Resident Evil</p>
+              </div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="game">
+              <div class="img">
+                <img src="./img/tlou.jpeg" alt="" />
+              </div>
+              <div class="title_game">
+                <p>The Last of us</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <br />
+      <section class="section about" id="about">
+        <div class="h4">
+          <h4>Conocenos un poco más</h4>
+        </div>
+        <div class="container">
+          <div class="p">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
+              ducimus, reiciendis exercitationem minus aperiam ex illum quis
+              aliquam unde! Ipsa odio dignissimos explicabo debitis libero culpa
+              quis unde earum, optio ipsum quas, nihil iste voluptatem ea
+              officia. Quasi ratione rerum dolore, mollitia quod corporis
+              excepturi consequuntur harum velit odit? Possimus quisquam
+              aspernatur saepe qui repudiandae adipisci commodi nobis explicabo
+              fugiat. Similique minus quasi, iste distinctio fuga ad doloremque.
+              Suscipit eveniet nesciunt nam laudantium architecto cupiditate
+              aperiam perferendis odit, iste dolores. Quaerat placeat quibusdam
+              nemo possimus dicta reiciendis delectus modi voluptas molestias
+              quae vero facere qui voluptatem aspernatur atque blanditiis
+              officia perferendis maxime, fugiat dolore in ex. Eveniet itaque
+              facilis cupiditate, dolorum saepe distinctio quibusdam,
+              repellendus sunt minima asperiores quam soluta eum consectetur
+              maxime eius suscipit omnis in atque.
+            </p>
+            <br />
+            <p><a href="#"> leer más </a></p>
+          </div>
+          <img src="./img/us.jpeg" alt="" />
+        </div>
+        <br />
+      </section>
+      <section class="section contact" id="contact">
+        <div class="h4">
+          <h4>Contactate con nosotros</h4>
+        </div>
+        <div class="container">
+          <form>
+            <div class="form_body">
+              <div class="input">
+                <input type="text" required />
+                <label>Nombre</label>
+              </div>
+              <div class="input">
+                <input type="text" required />
+                <label>Apellido</label>
+              </div>
+              <div class="input">
+                <input type="text" required />
+                <label>Correo electrónico</label>
+              </div>
+              <div class="input">
+                <input type="text" required />
+                <label>Asunto</label>
+              </div>
+              <div class="input">
+                <textarea required></textarea>
+                <label>Mensaje</label>
+              </div>
+              <button class="btn">Envianos un mensaje</button>
+            </div>
+          </form>
+        </div>
+        <br />
+      </section>
+    </main>
+    <%- include('./partials/footer') %> 
+    <%- include('./partials/script') %>
+  </body>
+</html>
